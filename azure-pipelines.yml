@@ -6,12 +6,9 @@
 trigger:
 - master
 
-
 steps:
-- script: echo Build dockerimage
-  displayName: 'Run a one-line script'
-- task: Docker@2
-  inputs:
-    command: 'build'
-    Dockerfile: '**/Dockerfile'
+  - task: Docker@2
+    inputs:
+      command: 'build'
+      Dockerfile: '**/Dockerfile'
 
